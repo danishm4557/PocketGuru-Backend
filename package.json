@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/danishm4557/PocketGuru-Backend#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
