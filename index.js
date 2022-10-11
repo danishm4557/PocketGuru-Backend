@@ -11,7 +11,7 @@ bodyParser = require('body-parser');
 
 
 ///////////////////////// SET UP CORS ////////////////////////////
-const allowedList = ['http://localhost:3000', 'https://travel-logic-frontend.herokuapp.com']
+const allowedList = ['http://localhost:3000', 'https://pocket-guru-1.vercel.app/']
 const corsOptions = {
 	origin: (origin, callback) => {
 		if(allowedList.indexOf(origin) !== -1 || !origin) {
