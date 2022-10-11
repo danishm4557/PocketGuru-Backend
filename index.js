@@ -10,7 +10,7 @@ bodyParser = require('body-parser');
 
 
 ///////////////////////// SET UP CORS ////////////////////////////
-const allowedList = ['http://localhost:3000', 'https://pocket-guru.vercel.app/']
+const allowedList = ['http://localhost:3000', 'https://pocket-guru.vercel.app/', 'https://pocket-guru-backend.herokuapp.com/']
 const corsOptions = {
 	origin: (origin, callback) => {
 		if(allowedList.indexOf(origin) !== -1 || !origin) {
