@@ -1,9 +1,9 @@
 const express = require("express");
 const note = express.Router();
 const Note = require("../models/Notes");
-// const compression = require("compression");
+const compression = require("compression");
 
-// note.use(compression()); // Data coming from Front-End too large. Using this to compress it.
+note.use(compression()); // Data coming from Front-End too large. Using this to compress it.
 
 note.get("/", (req, res) => {
   Note.find({}, (error, foundNote) => {

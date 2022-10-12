@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 let cors = require("cors");
 require("dotenv").config();
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
+const PORT = 8000; 
 const mongoose = require("mongoose");
 const MONGODB_URI = process.env.MONGODB_URI;
 bodyParser = require('body-parser');
@@ -10,7 +11,7 @@ bodyParser = require('body-parser');
 
 
 ///////////////////////// SET UP CORS ////////////////////////////
-const allowedList = ['http://localhost:3000', 'https://pocket-guru.vercel.app', 'https://pocket-guru-backend.herokuapp.com']
+const allowedList = ['http://localhost:3000', 'https://pocket-guru.vercel.app', 'https://pocket-guru-backend.herokuapp.com/note']
 const corsOptions = {
 	origin: (origin, callback) => {
 		if(allowedList.indexOf(origin) !== -1 || !origin) {
@@ -65,6 +66,9 @@ app.get("/", (req, res) => {
   res.send("Database Working for Notes");
 });
 
+// app.get("/note", (req, res) => {
+//   res.send("Notes working");
+// })
 
 
 ///////////////////////// USE NOTES ROUTE/////////////////////////
