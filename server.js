@@ -41,8 +41,7 @@ const db = mongoose.connection;
 mongoose.connect(
   MONGODB_URI,
   {
-    useNewUrlParser: true,
-    useFindAndModify: false,
+    useNewUrlParser: true, 
     useUnifiedTopology: true
   },
   () => {
