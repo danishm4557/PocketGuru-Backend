@@ -42,7 +42,8 @@ mongoose.connect(
   MONGODB_URI,
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
   },
   () => {
     console.log("Database Connected");
